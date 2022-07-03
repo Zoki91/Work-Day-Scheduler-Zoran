@@ -2,15 +2,15 @@
 var today = moment();
 $("#currentDay").text(today.format("MMMM Do YYYY, h:mm:ss a"));
 
-const hourToColor = {'1': 'red', '2': 'blue'};
+const hourToColor = { '1': 'red', '2': 'blue' };
 
 $(".btn").on("click", function () {
   //get nearby values.
   console.log(this);
   //this below is from the "enter-note" in the HTML
-  var text = $(this).siblings(".enter-note").val(); 
+  var text = $(this).siblings(".enter-note").val();
   // this below is taken from teh id from the HTML
-  var time = $(this).parent().attr("id"); 
+  var time = $(this).parent().attr("id");
 
   //save items in local storage.
   localStorage.setItem(time, text);
